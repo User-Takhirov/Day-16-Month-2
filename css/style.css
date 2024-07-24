@@ -1,0 +1,233 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:root {
+  --chorniy: #282b22;
+  --zeleniy: #3d4a39;
+  --bіliy: #fff;
+  --korichneviy: #ae7b3c;
+  --sіriy: #f3f3f3;
+  --bіliy-fon: #fff;
+}
+
+:root {
+  --font-family: "Raleway", sans-serif;
+  --second-family: "Lato", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+}
+
+.container {
+  max-width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.header {
+  padding: 15px 0;
+}
+
+.header_logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header_list {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+
+.header_link {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: var(--chorniy);
+}
+
+.header_media_list {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.header_num_block {
+  display: none;
+}
+
+.header_btn {
+  border: none;
+}
+
+.header_num_link {
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: var(--zeleniy);
+}
+
+@media screen and (min-width: 640px) {
+  .header_media_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header_num_block {
+    display: block;
+  }
+  .header_nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 50px;
+  }
+  .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 50px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .header_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header_btn {
+    display: none;
+  }
+  .list {
+    gap: 51px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header_nav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .list {
+    gap: 164px;
+  }
+}
+.hero {
+  background-image: url(../img/hero_mb.png);
+  background-repeat: no-repeat;
+  padding: 70px 14px 15px 10px;
+  background-size: cover;
+}
+
+.hero_title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 120%;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--bіliy);
+  margin-bottom: 28px;
+}
+
+.hero_text {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 145%;
+  text-align: center;
+  color: var(--bіliy);
+  opacity: 0.8;
+  padding-bottom: 30px;
+}
+
+.hero_btn {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  color: var(--bіliy);
+  padding: 22px 72px;
+  white-space: nowrap;
+  border: none;
+  -webkit-box-shadow: 0 20px 25px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0 20px 25px 0 rgba(0, 0, 0, 0.05);
+  background: var(--korichneviy);
+}
+
+.hero_btn_block {
+  padding-bottom: 62px;
+}
+
+@media screen and (min-width: 640px) {
+  .hero {
+    background-image: url(../img/hero_640_bg.png);
+    padding: 120px 97px 220px 97px;
+  }
+  .hero_title {
+    margin-bottom: 20px;
+  }
+  .hero_text {
+    margin-bottom: 50px;
+  }
+}/*# sourceMappingURL=style.css.map */
