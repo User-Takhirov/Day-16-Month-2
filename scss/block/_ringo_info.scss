@@ -1,0 +1,130 @@
+.ringo_info {
+    padding-bottom: 100px;
+}
+
+.ringo_info_title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--chorniy);
+    margin-bottom: 80px;
+}
+
+.ringo_info_text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 145%;
+    color: var(--chorniy);
+    opacity: .8;
+    position: relative;
+    margin-left: 38px;
+}
+
+.ringo_info_item {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 60px;
+    position: relative;
+
+    &:nth-child(1)::before {
+        content: "";
+        border: 1px solid #C7C8C6;
+        width: 300px;
+        height: 0px;
+        position: absolute;
+        top: -30px;
+    }
+}
+
+.ringo_info_item::after {
+    content: "";
+    border: 1px solid #C7C8C6;
+    width: 300px;
+    height: 0px;
+    position: absolute;
+    bottom: -30px;
+}
+
+.ringo_info_text::before {
+    content: "";
+    background-image: url(../img/ringo_info.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    left: -30px;
+}
+
+@media screen and (min-width:640px) {
+    .ringo_info_title {
+        font-size: 28px;
+        line-height: 130%;
+        margin-bottom: 91px;
+    }
+
+    .ringo_info_list {
+        display: flex;
+        justify-content: center;
+        gap: 59px;
+    }
+
+    .ringo_info_text {
+        font-size: 16px;
+        line-height: 145%;
+    }
+
+    .ringo_info_item {
+        margin-bottom: 0;
+
+        &:nth-child(1)::before {
+            width: 0;
+            height: 200px;
+            transform: rotate(90deg);
+            margin-left: 111%;
+            margin-top: -100px;
+            transform: translate(-50%, 50%);
+        }
+    }
+
+    .ringo_info_list {
+        padding: 30px 0;
+        border-top: 2px solid #C7C8C6;
+        border-bottom: 2px solid #C7C8C6;
+
+    }
+
+    .ringo_info_item::after {
+        display: none;
+    }
+
+    .ringo_info_text {
+        width: 243px;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .ringo_info_title {
+        font-size: 36px;
+        line-height: 130%;
+    }
+
+    .ringo_info_text {
+        width: 370px;
+    }
+
+    .ringo_info_item {
+        &:nth-child(1)::before {
+            transform: rotate(90deg);
+            margin-left: 107%;
+            margin-top: -79px;
+            transform: translate(-50%, 50%);
+            border: 1px solid #C7C8C6;
+            width: 0px;
+            height: 167%;
+        }
+    }
+}
